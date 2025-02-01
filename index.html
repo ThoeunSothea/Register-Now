@@ -5,210 +5,266 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Now</title>
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: rgb(36, 36, 126);
+    width: 100%;
+    height: 110vh;
+    display:grid;
+    place-content: center;
+}
+.container >.card-body{
+    background-color:rgb(254, 255, 254);
+    width: 1010px;
+    height: 925px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-radius: 8px;
+}
+.container >.card-body> .image{
+    width: 100%;
+    height: 16%;
+    /* background-color: rgb(42, 192, 87); */
+}
+.container >.card-body> .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 
-        .container {
-            background-color: rgb(36, 36, 126);
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+}
+.container >.card-body>form{
+    text-align: center;
 
-        .card-body {
-            background-color: rgb(254, 255, 254);
-            width: 100%;
-            max-width: 1010px;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgb(0, 0, 0);
-            border-radius: 8px;
-        }
+}
+.container >.card-body>form>.section1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    place-content:center;
+    justify-content: space-between;
+}
+.container >.card-body>form>.section1>input{
+    width:49%;
+    padding: 10px ;
+    margin: 10px 0;
+}
+.container >.card-body>form>.section2{
+    display: flex;
+    align-items: center;
+    place-content:center;
+    justify-content: space-between;
+}
+.container >.card-body>label,input{
+    padding: 0;
+    margin: 0 ;
+}
+.container >.card-body>form>.section2>input{
+    width: 35%;
+    padding: 10px ;
+    margin: 20px 0;
+}
+.container >.card-body>form>.section2>.gender>label{
+    width: 35%;
+    padding: 10px ;
+    margin: 20px 0;
+}
+.container >.card-body>form>.section3>input{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
 
-        .image img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
+.container >.card-body>form>.section4>.Applyfor{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+.container >.card-body>form>.section4>.Applyfor >.Apply>input,label{
+    padding: 40px;
+}
+.container >.card-body>form>.section5{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    place-content:center;
+    justify-content: space-between;
+}
+.container >.card-body>form>.section5>input{
+    width:32%;
+    padding: 10px ;
+    margin: 10px 0;
+}
+.container >.card-body>form>.section6>.Applyfor{
+    display: flex;
+    align-items: center;
+    place-content: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 10px 0;
+}
+.container >.card-body>form>.section6>.School{
+    display: flex;
+    align-items: center;
+    place-content: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 10px 0;
+}
+.container >.card-body>form>.section6>.School>.note{
+    display: flex;
+    align-items: center;
+    place-content: center;
+    padding: 0;
+    margin: 10px 0;
+}
 
-        form {
-            text-align: center;
-        }
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: 1px solid white;
+}
 
-        .section1, .section2, .section3, .section4, .section5, .section6 {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 10px 0;
-        }
+th, td {
+    padding: 10px;
+    border: 1px solid white;
+    text-align: left;
+}
 
-        .section1 input, .section2 input, .section3 input, .section5 input {
-            flex: 1 1 45%;
-            padding: 10px;
-        }
+th {
+    background-color: #222;
+}
+.container > .card-body > form > button{
+    margin: 10px;
+    width: 30%;
+    padding: 15px ;
+    border: none;
+    border-radius: 14px;
+    background-color:rgb(35, 12, 97) ;
+    color: #fff;
+    cursor: pointer;
+    transform: 0.3s ease-in-out;
 
-        .section2 .gender {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+}
+.container > .card-body > form > button:hover{
+    transform: scale(1.1);
+}
+@media(max-width:767px){
+    .card-body{
+        width: 95%;
+        padding: 10px;
+    }
+    .section1.section2.section3.section4.section5.section6{
+        flex-direction: column;
+    }
+    .section1 input,.section2 input,.section3 input,.section4 input,.section5 input ,.section6 input{
+        width: 100%;
+    }
+}
 
-        .section4 .Applyfor, .section6 .School {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
 
-        .section4 .Apply, .section6 .School {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .section4 input[type="checkbox"], .section6 input[type="checkbox"] {
-            margin-right: 5px;
-        }
-
-        button {
-            margin: 10px;
-            padding: 15px;
-            border: none;
-            border-radius: 14px;
-            background-color: rgb(35, 12, 97);
-            color: #fff;
-            cursor: pointer;
-            transition: 0.3s ease-in-out;
-        }
-
-        button:hover {
-            transform: scale(1.1);
-        }
-
-        table {
-            width: 100%;
-            margin: 20px 0;
-            border-collapse: collapse;
-            background-color: black;
-            color: white;
-            font-size: 16px;
-            border: 1px solid white;
-        }
-
-        th, td {
-            padding: 10px;
-            border: 1px solid white;
-            text-align: left;
-        }
-
-        th {
-            background-color: #222;
-        }
-
-        @media (max-width: 767px) {
-            .section1, .section2, .section3, .section4, .section5, .section6 {
-                flex-direction: column;
-            }
-
-            .section1 input, .section2 input, .section3 input, .section5 input {
-                width: 100%;
-            }
-
-            table {
-                font-size: 14px;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="card-body">
-            <div class="image">
-                <img src="http://westernuniversity.edu.kh/themes/webfront/images/Logo_with_title_right.png" alt="">
-            </div>
-            <form action="" id="register_Form">
-                <h2>Register</h2>
-                <div class="section1">
-                    <input type="text" id="KhmerName" placeholder="Khmer Name" required>
-                    <input type="text" id="EnglishName" placeholder="English Name" required>
-                </div>
-                <div class="section2">
-                    <input type="date" id="DateOfBirth" placeholder="Date of Birth" required>
-                    <div class="gender">
-                        <label>Gender</label>
-                        <input type="radio" name="Gender" id="Male" value="Male" required>
-                        <label for="Male">Male</label>
-                        <input type="radio" name="Gender" id="Female" value="Female" required>
-                        <label for="Female">Female</label>
-                    </div>
-                    <input type="text" id="Nationality" placeholder="Nationality" required>
-                </div>
-                <div class="section3">
-                    <input type="text" id="PlaceofBirth" placeholder="Place of Birth" required>
-                    <input type="text" id="Address" placeholder="Address" required>
-                </div>
-                <div class="section1">
-                    <input type="tel" id="PhoneNumber" placeholder="Phone Number" required>
-                    <input type="email" id="Email" placeholder="Email" required>
-                </div>
-                <div class="section1">
-                    <input type="text" id="FatherName" placeholder="Father's Name" required>
-                    <input type="tel" id="FatherPhoneNumber" placeholder="Father's Phone Number" required>
-                </div>
-                <div class="section1">
-                    <input type="text" id="MotherName" placeholder="Mother's Name" required>
-                    <input type="tel" id="MotherPhoneNumber" placeholder="Mother's Phone Number" required>
-                </div>
-                <div class="section4">
-                    <div class="Applyfor">
-                        <h3>Apply for</h3>
-                        <div class="Apply">
-                            <input type="checkbox" id="Associate" value="Associate Degree">
-                            <label for="Associate">Associate Degree</label>
-                            <input type="checkbox" id="Bachelor" value="Bachelor's Degree">
-                            <label for="Bachelor">Bachelor's Degree</label>
-                            <input type="checkbox" id="Master" value="Master's Degree">
-                            <label for="Master">Master's Degree</label>
-                            <input type="checkbox" id="Doctoral" value="Doctoral Degree">
-                            <label for="Doctoral">Doctoral Degree</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="section1">
-                    <input type="text" id="Year" placeholder="Year" required>
-                    <input type="text" id="Batch" placeholder="Batch" required>
-                </div>
-                <div class="section5">
-                    <input type="text" id="Faculty" placeholder="Faculty" required>
-                    <input type="text" id="Major" placeholder="Major" required>
-                    <input type="text" id="Session" placeholder="Session" required>
-                </div>
-                <div class="section6">
-                    <div class="School">
-                        <h3>School Fees</h3>
-                        <div class="School">
-                            <input type="checkbox" id="Associate_Degree" value="Associate Degree">
-                            <label for="Associate_Degree">Associate Degree</label>
-                            <input type="checkbox" id="Bachelor_Degree" value="Bachelor's Degree">
-                            <label for="Bachelor_Degree">Bachelor's Degree</label>
-                        </div>
-                        <div class="note">
-                            <h3>សំគាល់​</h3>
-                            <h5>ទឺកប្រាក់ដែលបានបងើថ្លៃសិក្សារួចហើយ​ មិនអាចដកវិញបានឡើយ។</h5>
-                        </div>
-                    </div>
-                </div>
-                <button class="update-btn">Update Now</button>
-                <button class="Restart_Form">Restart Form</button>
-                <button class="Register_Now">Register Now</button>
-            </form>
+   <div class="container">
+    <div class="card-body">
+        <div class="image">
+            <img src="http://westernuniversity.edu.kh/themes/webfront/images/Logo_with_title_right.png" alt="">
         </div>
+        <form action="" id="register_Form">
+            <h2>Register</h2>
+            <div class="section1">
+                <input type="text" id="KhmerName" placeholder="Khmer Name" required>
+                <input type="text" id="EnglishName" placeholder="English Name" required>
+            </div>
+            <div class="section2">
+                <input type="date" id="DateOfBirth" placeholder="Date of Birth" required>
+                <div class="gender">
+                    <label>Gender</label>
+                    <input type="radio" name="Gender" id="Male" value="Male" required>
+                    <label for="Male">Male</label>
+                    <input type="radio" name="Gender" id="Female" value="Female" required>
+                    <label for="Female">Female</label>                   
+                </div>
+            <input type="text" id="Nationality" placeholder="Nationality" required>
+            </div>
+            
+            <div class="section3">
+                <input type="text" id="PlaceofBirth" placeholder="Place of Birth" required>
+                <input type="text" id="Address" placeholder="Address" required>
+            </div>
+            <div class="section1">
+                <input type="tel" id="PhoneNumber" placeholder="Phone Number" required>
+                <input type="email" id="Email" placeholder="Email" required>
+            </div>
+            <div class="section1">
+                <input type="text" id="FatherName" placeholder="Father's Name" required>
+                <input type="tel" id="FatherPhoneNumber" placeholder="Father's Phone Number" required>
+            </div>
+            <div class="section1">
+                <input type="text" id="MotherName" placeholder="Mother's Name" required>
+                <input type="tel" id="MotherPhoneNumber" placeholder="Mother's Phone Number" required>
+            </div>
+            <div class="section4">
+                <div class="Applyfor">
+                    <h3>Apply for</h3>
+                    <div class="Apply">
+                        <input type="checkbox" id="Associate" value="Associate Degree">
+                        <label for="Associate">Associate Degree</label>
+                        <input type="checkbox" id="Bachelor" value="Bachelor's Degree">
+                        <label for="Bachelor">Bachelor's Degree</label>                   
+                        <input type="checkbox" id="Master" value="Master's Degree">
+                        <label for="Master">Master's Degree</label>
+                        <input type="checkbox" id="Doctoral" value="Doctoral Degree">
+                        <label for="Doctoral">Doctoral Degree</label>                   
+                    </div>
+                </div>
+            </div>
+            <div class="section1">
+                <input type="text" id="Year" placeholder="Year" required>
+                <input type="text" id="Batch" placeholder="Batch" required>
+            </div>
+            <div class="section5">
+                <input type="text" id="Faculty" placeholder="Faculty" required>
+                <input type="text" id="Major" placeholder="Major" required>
+                <input type="text" id="Session" placeholder="Session" required>
+            </div>
+            <div class="section6">
+                <div class="School">
+                    <h3>School Fees</h3>
+                    <div class="School">
+                        <input type="checkbox" id="Associate_Degree" value="Associate Degree">
+                        <label for="Associate_Degree">Associate Degree</label>
+                        <input type="checkbox" id="Bachelor_Degree" value="Bachelor's Degree">
+                        <label for="Bachelor_Degree">Bachelor's Degree</label>                  
+                    </div>
+                    <div class="note">
+                        <h3>សំគាល់​</h3>
+                        <h5>ទឺកប្រាក់ដែលបានបងើថ្លៃសិក្សារួចហើយ​ មិនអាចដកវិញបានឡើយ។</h5>
+                    </div>
+                </div>
+            </div>
+
+            <button class="update-btn">Update Now</button>
+            <button class="Restart_Form">Restart Form</button>
+            <button class="Register_Now">Register Now</button>
+        </form>
     </div>
-    <table class="hh">
+   </div> 
+   <table class="hh">
         <thead>
             <tr>
                 <th>Khmer_Name</th>
@@ -239,8 +295,11 @@
             <!--Data will be added here-->
         </tbody>
     </table>
-    <script>
-        function getCurrentTimestamp() {
+</body>
+</html>
+<script>
+
+    function getCurrentTimestamp() {
         const now = new Date();
         return now.toLocaleString(); 
     }
@@ -450,6 +509,4 @@
             alert("✏️ សូមកែប្រែទិន្នន័យហើយចុច Update!");
         }
     });
-    </script>
-</body>
-</html>
+</script>
