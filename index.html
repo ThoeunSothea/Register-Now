@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Now</title>
+    <style>
+        
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: rgb(36, 36, 126);
+    width: 100%;
+    height: 110vh;
+    display:grid;
+    place-content: center;
+}
+.container >.card-body{
+    background-color:rgb(254, 255, 254);
+    width: 1010px;
+    height: 925px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-radius: 8px;
+}
+.container >.card-body> .image{
+    width: 100%;
+    height: 16%;
+    /* background-color: rgb(42, 192, 87); */
+}
+.container >.card-body> .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+.container >.card-body>form{
+    text-align: center;
+
+}
+.container >.card-body>form>.section1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    place-content:center;
+    justify-content: space-between;
+}
+.container >.card-body>form>.section1>input{
+    width:49%;
+    padding: 10px ;
+    margin: 10px 0;
+}
+.container >.card-body>form>.section2{
+    display: flex;
+    align-items: center;
+    place-content:center;
+    justify-content: space-between;
+}
+.container >.card-body>label,input{
+    padding: 0;
+    margin: 0 ;
+}
+.container >.card-body>form>.section2>input{
+    width: 35%;
+    padding: 10px ;
+    margin: 20px 0;
+}
+.container >.card-body>form>.section2>.gender>label{
+    width: 35%;
+    padding: 10px ;
+    margin: 20px 0;
+}
+.container >.card-body>form>.section3>input{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.container >.card-body>form>.section4>.Applyfor{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+.container >.card-body>form>.section4>.Applyfor >.Apply>input,label{
+    padding: 40px;
+}
+.container >.card-body>form>.section5{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    place-content:center;
+    justify-content: space-between;
+}
+.container >.card-body>form>.section5>input{
+    width:32%;
+    padding: 10px ;
+    margin: 10px 0;
+}
+.container >.card-body>form>.section6>.Applyfor{
+    display: flex;
+    align-items: center;
+    place-content: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 10px 0;
+}
+.container >.card-body>form>.section6>.School{
+    display: flex;
+    align-items: center;
+    place-content: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 10px 0;
+}
+.container >.card-body>form>.section6>.School>.note{
+    display: flex;
+    align-items: center;
+    place-content: center;
+    padding: 0;
+    margin: 10px 0;
+}
+/* .container >.card-body>form>.section4>.Applyfor >.Apply>input,label */
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: 1px solid white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid white;
+    text-align: left;
+}
+
+th {
+    background-color: #222;
+}
+.container > .card-body > form > button{
+    margin: 10px;
+    width: 30%;
+    padding: 15px ;
+    border: none;
+    border-radius: 14px;
+    background-color:rgb(35, 12, 97) ;
+    color: #fff;
+    cursor: pointer;
+    transform: 0.3s ease-in-out;
+
+}
+.container > .card-body > form > button:hover{
+    transform: scale(1.1);
+}
+
+
+
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="card-body">
+        <div class="image">
+            <img src="http://westernuniversity.edu.kh/themes/webfront/images/Logo_with_title_right.png" alt="">
+        </div>
+        <form action="" id="register_Form">
+            <h2>Register</h2>
+            <div class="section1">
+                <input type="text" id="KhmerName" placeholder="Khmer Name" required>
+                <input type="text" id="EnglishName" placeholder="English Name" required>
+            </div>
+            <div class="section2">
+                <input type="date" id="DateOfBirth" placeholder="Date of Birth" required>
+                <div class="gender">
+                    <label>Gender</label>
+                    <input type="radio" name="Gender" id="Male" value="Male" required>
+                    <label for="Male">Male</label>
+                    <input type="radio" name="Gender" id="Female" value="Female" required>
+                    <label for="Female">Female</label>                   
+                </div>
+            <input type="text" id="Nationality" placeholder="Nationality" required>
+            </div>
+            
+            <div class="section3">
+                <input type="text" id="PlaceofBirth" placeholder="Place of Birth" required>
+                <input type="text" id="Address" placeholder="Address" required>
+            </div>
+            <div class="section1">
+                <input type="tel" id="PhoneNumber" placeholder="Phone Number" required>
+                <input type="email" id="Email" placeholder="Email" required>
+            </div>
+            <div class="section1">
+                <input type="text" id="FatherName" placeholder="Father's Name" required>
+                <input type="tel" id="FatherPhoneNumber" placeholder="Father's Phone Number" required>
+            </div>
+            <div class="section1">
+                <input type="text" id="MotherName" placeholder="Mother's Name" required>
+                <input type="tel" id="MotherPhoneNumber" placeholder="Mother's Phone Number" required>
+            </div>
+            <div class="section4">
+                <div class="Applyfor">
+                    <h3>Apply for</h3>
+                    <div class="Apply">
+                        <input type="checkbox" id="Associate" value="Associate Degree">
+                        <label for="Associate">Associate Degree</label>
+                        <input type="checkbox" id="Bachelor" value="Bachelor's Degree">
+                        <label for="Bachelor">Bachelor's Degree</label>                   
+                        <input type="checkbox" id="Master" value="Master's Degree">
+                        <label for="Master">Master's Degree</label>
+                        <input type="checkbox" id="Doctoral" value="Doctoral Degree">
+                        <label for="Doctoral">Doctoral Degree</label>                   
+                    </div>
+                </div>
+            </div>
+            <div class="section1">
+                <input type="text" id="Year" placeholder="Year" required>
+                <input type="text" id="Batch" placeholder="Batch" required>
+            </div>
+            <div class="section5">
+                <input type="text" id="Faculty" placeholder="Faculty" required>
+                <input type="text" id="Major" placeholder="Major" required>
+                <input type="text" id="Session" placeholder="Session" required>
+            </div>
+            <div class="section6">
+                <div class="School">
+                    <h3>School Fees</h3>
+                    <div class="School">
+                        <input type="checkbox" id="Associate_Degree" value="Associate Degree">
+                        <label for="Associate_Degree">Associate Degree</label>
+                        <input type="checkbox" id="Bachelor_Degree" value="Bachelor's Degree">
+                        <label for="Bachelor_Degree">Bachelor's Degree</label>                  
+                    </div>
+                    <div class="note">
+                        <h3>សំគាល់​</h3>
+                        <h5>ទឺកប្រាក់ដែលបានបងើថ្លៃសិក្សារួចហើយ​ មិនអាចដកវិញបានឡើយ។</h5>
+                    </div>
+                </div>
+            </div>
+
+            <button class="update-btn">Update Now</button>
+            <button class="Restart_Form">Restart Form</button>
+            <button class="Register_Now">Register Now</button>
+        </form>
+    </div>
+   </div> 
+   <table class="hh">
+        <thead>
+            <tr>
+                <th>Khmer_Name</th>
+                <th>English_Name</th>
+                <th>Date_of_Birth</th>
+                <th>Gender</th>
+                <th>Nationality</th>
+                <th>Place_of_Birth</th>
+                <th>Address</th>
+                <th>Phone_Number</th>
+                <th>Email</th>
+                <th>Father's_Name</th>
+                <th>Father's_Phone Number</th>
+                <th>Mother's_Name</th>
+                <th>Mother's_Phone Number</th>
+                <th>Apply_for</th>
+                <th>Year</th>
+                <th>Batch</th>
+                <th>Faculty</th>
+                <th>Major</th>
+                <th>Session</th>
+                <th>School_Fees</th>
+                <th>Timestamp</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Data will be added here-->
+        </tbody>
+    </table>
+</body>
+</html>
+<script>
+
+    function getCurrentTimestamp() {
+        const now = new Date();
+        return now.toLocaleString(); 
+    }
+
+
+    function validateForm() {
+        const requiredFields = [
+            'KhmerName', 'EnglishName', 'DateOfBirth', 'Nationality', 'PlaceofBirth', 'Address',
+            'PhoneNumber', 'Email', 'FatherName', 'FatherPhoneNumber', 'MotherName', 'MotherPhoneNumber',
+            'Year', 'Batch', 'Faculty', 'Major', 'Session'
+        ];
+
+        for (const field of requiredFields) {
+            const value = document.getElementById(field).value.trim();
+            if (!value) {
+                alert(`សូមបំពេញព័ត៌មាននៅក្នុង field`);
+                return false;
+            }
+        }
+
+
+        const genderSelected = document.querySelector('input[name="Gender"]:checked');
+        if (!genderSelected) {
+            alert("សូមជ្រើសរើសភេទ។");
+            return false;
+        }
+
+        return true;
+    }
+
+    // Register Now
+    document.querySelector('.Register_Now').addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+        if (!validateForm()) {
+            return; 
+        }
+
+        const formData = {
+            KhmerName: document.getElementById('KhmerName').value,
+            EnglishName: document.getElementById('EnglishName').value,
+            DateOfBirth: document.getElementById('DateOfBirth').value,
+            Gender: document.querySelector('input[name="Gender"]:checked')?.value || '',
+            Nationality: document.getElementById('Nationality').value,
+            PlaceOfBirth: document.getElementById('PlaceofBirth').value,
+            Address: document.getElementById('Address').value,
+            PhoneNumber: document.getElementById('PhoneNumber').value,
+            Email: document.getElementById('Email').value,
+            FatherName: document.getElementById('FatherName').value,
+            FatherPhone: document.getElementById('FatherPhoneNumber').value,
+            MotherName: document.getElementById('MotherName').value,
+            MotherPhone: document.getElementById('MotherPhoneNumber').value,
+            ApplyFor: Array.from(document.querySelectorAll('.Apply input[type="checkbox"]:checked'))
+                .map(e => e.value) 
+                .join(', ') || '',
+            Year: document.getElementById('Year').value,
+            Batch: document.getElementById('Batch').value,
+            Faculty: document.getElementById('Faculty').value,
+            Major: document.getElementById('Major').value,
+            Session: document.getElementById('Session').value,
+            School: Array.from(document.querySelectorAll('.School input[type="checkbox"]:checked'))
+                .map(e => e.value)
+                .join(', ') || '',
+            Timestamp: getCurrentTimestamp(),
+        };
+
+        const table = document.querySelector('.hh tbody');
+        const newRow = document.createElement('tr');
+
+        for (const key in formData) {
+            const newCell = document.createElement('td');
+            newCell.textContent = formData[key];
+            newRow.appendChild(newCell);
+        }
+
+        const actionsCell = document.createElement('td');
+        actionsCell.innerHTML = `
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>`;
+        newRow.appendChild(actionsCell);
+        table.appendChild(newRow);
+
+        alert("✅ ទិន្នន័យត្រូវបានបញ្ចូល!");
+    });
+
+    // Update Row
+    document.querySelector('.update-btn').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        if (!validateForm()) {
+            return; 
+        }
+
+        const editingRowIndex = parseInt(document.getElementById('register_Form').dataset.editingRow, 10);
+        if (isNaN(editingRowIndex) || editingRowIndex <= 0) {
+            alert('⚠️ Invalid row index.');
+            return;
+        }
+
+        const table = document.querySelector('.hh tbody');
+        const row = table.rows[editingRowIndex - 1];
+        if (!row) {
+            alert('⚠️ Row not found.');
+            return;
+        }
+
+        const cells = row.querySelectorAll('td');
+
+        cells[0].textContent = document.getElementById('KhmerName').value;
+        cells[1].textContent = document.getElementById('EnglishName').value;
+        cells[2].textContent = document.getElementById('DateOfBirth').value;
+        cells[4].textContent = document.getElementById('Nationality').value;
+        cells[5].textContent = document.getElementById('PlaceofBirth').value;
+        cells[6].textContent = document.getElementById('Address').value;
+        cells[7].textContent = document.getElementById('PhoneNumber').value;
+        cells[8].textContent = document.getElementById('Email').value;
+        cells[9].textContent = document.getElementById('FatherName').value;
+        cells[10].textContent = document.getElementById('FatherPhoneNumber').value;
+        cells[11].textContent = document.getElementById('MotherName').value;
+        cells[12].textContent = document.getElementById('MotherPhoneNumber').value;
+        cells[14].textContent = document.getElementById('Year').value;
+        cells[15].textContent = document.getElementById('Batch').value;
+        cells[16].textContent = document.getElementById('Faculty').value;
+        cells[17].textContent = document.getElementById('Major').value;
+        cells[18].textContent = document.getElementById('Session').value;
+
+        // Update Gender
+        const selectedGender = document.querySelector('input[name="Gender"]:checked')?.value || '';
+        cells[3].textContent = selectedGender;
+
+        
+        const selectedApplyFor = Array.from(document.querySelectorAll('.Apply input[type="checkbox"]:checked'))
+            .map(e => e.value).join(', ');
+        cells[13].textContent = selectedApplyFor;
+
+        
+        const selectedSchool = Array.from(document.querySelectorAll('.School input[type="checkbox"]:checked'))
+            .map(e => e.value).join(', ');
+        cells[19].textContent = selectedSchool;
+
+    
+        cells[20].textContent = getCurrentTimestamp();
+
+        alert("✅ ទិន្នន័យត្រូវបានកែប្រែ!");
+    });
+
+    document.querySelector('.Restart_Form').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        document.getElementById('register_Form').reset();
+        alert('ទិន្នន័យបញ្ចូលត្រូវបានលុប។ ទិន្នន័យដើមនៅតែមាន។');
+    });
+
+    // Delete Row
+    document.querySelector('.hh tbody').addEventListener('click', function(event) {
+        if (event.target.classList.contains('delete-btn')) {
+            event.target.closest('tr').remove();
+            alert("🗑 ទិន្នន័យត្រូវបានលុប!");
+        }
+    });
+
+    // Edit Row
+    document.querySelector('.hh tbody').addEventListener('click', function(event) {
+        if (event.target.classList.contains('edit-btn')) {
+            const row = event.target.closest('tr');
+            const cells = row.querySelectorAll('td');
+
+            document.getElementById('register_Form').dataset.editingRow = row.rowIndex;
+
+            document.getElementById('KhmerName').value = cells[0].textContent;
+            document.getElementById('EnglishName').value = cells[1].textContent;
+            document.getElementById('DateOfBirth').value = cells[2].textContent;
+            document.getElementById('Nationality').value = cells[4].textContent;
+            document.getElementById('PlaceofBirth').value = cells[5].textContent;
+            document.getElementById('Address').value = cells[6].textContent;
+            document.getElementById('PhoneNumber').value = cells[7].textContent;
+            document.getElementById('Email').value = cells[8].textContent;
+            document.getElementById('FatherName').value = cells[9].textContent;
+            document.getElementById('FatherPhoneNumber').value = cells[10].textContent;
+            document.getElementById('MotherName').value = cells[11].textContent;
+            document.getElementById('MotherPhoneNumber').value = cells[12].textContent;
+            document.getElementById('Year').value = cells[14].textContent;
+            document.getElementById('Batch').value = cells[15].textContent;
+            document.getElementById('Faculty').value = cells[16].textContent;
+            document.getElementById('Major').value = cells[17].textContent;
+            document.getElementById('Session').value = cells[18].textContent;
+
+            // Set Gender
+            const gender = cells[3].textContent.trim();
+            if (gender === "Male") {
+                document.getElementById('Male').checked = true;
+            } else if (gender === "Female") {
+                document.getElementById('Female').checked = true;
+            }
+
+            // Set Apply For
+            const selectedApplyfor = cells[13].textContent.split(',').map(item => item.trim());
+            document.querySelectorAll('.Apply input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = selectedApplyfor.includes(checkbox.value);
+            });
+
+            // Set School Fees
+            const selectedSchool = cells[19].textContent.split(',').map(item => item.trim());
+            document.querySelectorAll('.School input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = selectedSchool.includes(checkbox.value);
+            });
+
+            alert("✏️ សូមកែប្រែទិន្នន័យហើយចុច Update!");
+        }
+    });
+</script>
